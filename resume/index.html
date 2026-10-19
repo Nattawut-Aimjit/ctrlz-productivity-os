@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nattawut Aimjit | Resume</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #eeeeef;
+            color: #35343d;
+            line-height: 1.6;
+        }
+
+        .resume {
+            width: 100%;
+            max-width: 1050px;
+            margin: 35px auto;
+            background: white;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Header */
+        .header {
+            min-height: 280px;
+            background: #363540;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 40px 45px;
+            position: relative;
+        }
+
+        .profile {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 6px solid white;
+            object-fit: cover;
+            background: #4898ee;
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .header-text {
+            margin-left: 385px;
+        }
+
+        .header-text h1 {
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.08;
+        }
+
+        .header-text h1 span {
+            display: block;
+            font-weight: 400;
+        }
+
+        .header-text p {
+            margin-top: 14px;
+            font-size: 24px;
+        }
+
+        /* Main columns */
+        .content {
+            display: grid;
+            grid-template-columns: 43% 57%;
+        }
+
+        .left-column {
+            background: #dedde0;
+            padding: 100px 38px 50px;
+        }
+
+        .right-column {
+            padding: 100px 45px 50px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 25px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: #24232b;
+        }
+
+        .section-title i {
+            width: 32px;
+            text-align: center;
+            font-size: 27px;
+        }
+
+        .about {
+            font-size: 13.5px;
+            line-height: 1.55;
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            margin: 9px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item i {
+            width: 22px;
+            margin-top: 5px;
+            color: #24232b;
+        }
+
+        a {
+            color: inherit;
+            overflow-wrap: anywhere;
+        }
+
+        /* Skills and languages */
+        .skill-list,
+        .language-list {
+            padding-left: 29px;
+        }
+
+        .skill-list li,
+        .language-list li {
+            padding-left: 3px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        /* Education and experience */
+        .timeline-item {
+            position: relative;
+            padding-left: 48px;
+            margin-bottom: 24px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            width: 21px;
+            height: 21px;
+            background: #38373b;
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item h4 {
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.5;
+            text-transform: uppercase;
+        }
+
+        .timeline-item p {
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .timeline-item li {
+            padding-left: 2px;
+            margin-bottom: 3px;
+            line-height: 1.5;
+        }
+
+        .right-column .section-title {
+            margin-bottom: 18px;
+        }
+
+        /* Print button */
+        .print-button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 7px;
+            background: #363540;
+            color: white;
+            font-family: inherit;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background: #514f60;
+        }
+
+        /* Tablet */
+        @media (max-width: 760px) {
+            .resume {
+                margin: 0;
+            }
+
+            .header {
+                min-height: auto;
+                padding: 35px 20px 30px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile {
+                position: static;
+                transform: none;
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
+            }
+
+            .header-text {
+                margin-left: 0;
+            }
+
+            .header-text h1 {
+                font-size: 39px;
+            }
+
+            .header-text p {
+                font-size: 19px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .left-column,
+            .right-column {
+                padding: 35px 25px;
+            }
+
+            .about {
+                font-size: 14px;
+            }
+        }
+
+        /* Save as PDF */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .resume {
+                max-width: none;
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            .header {
+                min-height: 245px;
+            }
+
+            .profile {
+                width: 250px;
+                height: 250px;
+            }
+
+            .left-column,
+            .right-column {
+                padding-top: 85px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="print-button" onclick="window.print()">
+        <i class="fa-solid fa-file-pdf"></i>
+        Print / Save as PDF
+    </button>
+
+    <div class="resume">
+
+        <!-- Header -->
+        <header class="header">
+
+            <!-- Put your photo in the same folder and name it profile.jpg -->
+            <img
+                src="profile.jpg"
+                alt="Nattawut Aimjit"
+                class="profile"
+                onerror="this.style.display='none'"
+            >
+
+            <div class="header-text">
+                <h1>
+                    Nattawut
+                    <span>Aimjit</span>
+                </h1>
+                <p>Web Developer</p>
+            </div>
+
+        </header>
+
+        <!-- Resume content -->
+        <main class="content">
+
+            <!-- Left column -->
+            <aside class="left-column">
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-user"></i>
+                        About Me
+                    </h2>
+
+                    <p class="about">
+                        I am a Computer Science student with skills in
+                        HTML, CSS, PHP, and JavaScript. I enjoy solving
+                        problems and developing practical web applications.
+                        I am responsible, punctual, and eager to learn new
+                        technologies while improving my development skills.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-address-card"></i>
+                        Contact
+                    </h2>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0981789044</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:Nattawut.aim64@gmail.com">
+                            Nattawut.aim64@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/003nat300-hash"
+                           target="_blank">
+                            github.com/003nat300-hash
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>
+                            Nong Chumphon, Khao Yoi,
+                            Phetchaburi, Thailand
+                        </span>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-gear"></i>
+                        Skills
+                    </h2>
+
+                    <ul class="skill-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>MySQL</li>
+                        <li>Problem Solving</li>
+                        <li>Teamwork</li>
+                        <li>Creativity</li>
+                        <li>Responsibility</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-language"></i>
+                        Language
+                    </h2>
+
+                    <ul class="language-list">
+                        <li>Thai — Native</li>
+                        <li>English — Basic</li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <!-- Right column -->
+            <div class="right-column">
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Education
+                    </h2>
+
+                    <div class="timeline-item">
+                        <h3>2020 – 2022</h3>
+                        <h4>Khaoyoiwittaya School</h4>
+                        <p>Science – Mathematics</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>2023 – 2027</h3>
+                        <h4>Phetchaburi Rajabhat University</h4>
+                        <p>Bachelor of Computer Science</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Projects
+                    </h2>
+
+                    <div class="timeline-item">
+                        <h3>2025 – Present</h3>
+                        <h4>DormHub – Dormitory Search System</h4>
+
+                        <ul>
+                            <li>
+                                Developed a web application using
+                                HTML, CSS, PHP, and JavaScript.
+                            </li>
+                            <li>
+                                Designed a system for searching and
+                                displaying dormitory information.
+                            </li>
+                            <li>
+                                Integrated location and map features
+                                to help users find nearby accommodation.
+                            </li>
+                            <li>
+                                Developed features for dormitory owners
+                                to manage accommodation listings.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>2025</h3>
+                        <h4>E-Commerce Basic System</h4>
+
+                        <ul>
+                            <li>
+                                Developed basic online shopping
+                                and shopping cart features.
+                            </li>
+                            <li>
+                                Created product and order management
+                                functions.
+                            </li>
+                            <li>
+                                Practiced database design and
+                                backend development.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-bullseye"></i>
+                        Career Objective
+                    </h2>
+
+                    <p>
+                        Seeking an opportunity to apply my web
+                        development skills, gain practical experience,
+                        and contribute to real-world software projects.
+                    </p>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
