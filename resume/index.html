@@ -1,518 +1,736 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nattawut Aimjit | Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f6f8">
+  <meta name="description" content="Resume of Nattawut Aimjit - Computer Science Student and Web Developer">
+  <title>Nattawut Aimjit | Resume</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --text: #202124;
+      --muted: #70757d;
+      --line: #e7e9ed;
+      --accent: #2563eb;
+      --soft: #eef4ff;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #eeeeef;
-            color: #35343d;
-            line-height: 1.6;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .resume {
-            width: 100%;
-            max-width: 1050px;
-            margin: 35px auto;
-            background: white;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-        /* Header */
-        .header {
-            min-height: 280px;
-            background: #363540;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 40px 45px;
-            position: relative;
-        }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Kanit", sans-serif;
+      line-height: 1.7;
+    }
 
-        .profile {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 6px solid white;
-            object-fit: cover;
-            background: #4898ee;
-            position: absolute;
-            left: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .header-text {
-            margin-left: 385px;
-        }
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
 
-        .header-text h1 {
-            font-size: 54px;
-            font-weight: 800;
-            line-height: 1.08;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
 
-        .header-text h1 span {
-            display: block;
-            font-weight: 400;
-        }
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-        .header-text p {
-            margin-top: 14px;
-            font-size: 24px;
-        }
+    .brand {
+      font-family: "Inter", sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -1px;
+    }
 
-        /* Main columns */
-        .content {
-            display: grid;
-            grid-template-columns: 43% 57%;
-        }
+    .brand span {
+      color: var(--accent);
+    }
 
-        .left-column {
-            background: #dedde0;
-            padding: 100px 38px 50px;
-        }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
 
-        .right-column {
-            padding: 100px 45px 50px;
-        }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-        .section {
-            margin-bottom: 32px;
-        }
+    .back-link {
+      border: 1px solid var(--line);
+      padding: 7px 14px;
+      border-radius: 9px;
+      color: var(--text) !important;
+    }
 
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 25px;
-            font-weight: 800;
-            margin-bottom: 14px;
-            color: #24232b;
-        }
+    main {
+      padding: 48px 0 70px;
+    }
 
-        .section-title i {
-            width: 32px;
-            text-align: center;
-            font-size: 27px;
-        }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      align-items: center;
+      gap: 45px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 55px;
+      box-shadow: 0 12px 40px rgba(20,30,50,.035);
+    }
 
-        .about {
-            font-size: 13.5px;
-            line-height: 1.55;
-        }
+    .eyebrow {
+      display: inline-block;
+      background: var(--soft);
+      color: var(--accent);
+      border-radius: 7px;
+      padding: 5px 12px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
 
-        /* Contact */
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 13px;
-            margin: 9px 0;
-            overflow-wrap: anywhere;
-        }
+    h1 {
+      font-size: clamp(32px, 5vw, 49px);
+      line-height: 1.25;
+      letter-spacing: -.7px;
+      margin-bottom: 10px;
+    }
 
-        .contact-item i {
-            width: 22px;
-            margin-top: 5px;
-            color: #24232b;
-        }
+    .job-title {
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
 
-        a {
-            color: inherit;
-            overflow-wrap: anywhere;
-        }
+    .intro {
+      color: var(--muted);
+      max-width: 540px;
+      font-size: 15px;
+    }
 
-        /* Skills and languages */
-        .skill-list,
-        .language-list {
-            padding-left: 29px;
-        }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 27px;
+    }
 
-        .skill-list li,
-        .language-list li {
-            padding-left: 3px;
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 19px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: .2s;
+    }
 
-        /* Education and experience */
-        .timeline-item {
-            position: relative;
-            padding-left: 48px;
-            margin-bottom: 24px;
-        }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
 
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: 5px;
-            top: 9px;
-            width: 21px;
-            height: 21px;
-            background: #38373b;
-            border-radius: 50%;
-        }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
 
-        .timeline-item h3 {
-            font-size: 22px;
-            line-height: 1.4;
-            margin-bottom: 4px;
-        }
+    .btn-secondary {
+      background: white;
+      border: 1px solid var(--line);
+    }
 
-        .timeline-item h4 {
-            font-size: 15px;
-            font-weight: 800;
-            line-height: 1.5;
-            text-transform: uppercase;
-        }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
-        .timeline-item p {
-            font-size: 17px;
-            line-height: 1.55;
-        }
+    .photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
 
-        .timeline-item ul {
-            padding-left: 20px;
-            margin-top: 5px;
-        }
+    .profile-photo {
+      width: min(100%, 265px);
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 20px;
+      border: 7px solid #f1f3f6;
+      box-shadow: 0 12px 30px rgba(0,0,0,.09);
+    }
 
-        .timeline-item li {
-            padding-left: 2px;
-            margin-bottom: 3px;
-            line-height: 1.5;
-        }
+    .section {
+      margin-top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 32px;
+    }
 
-        .right-column .section-title {
-            margin-bottom: 18px;
-        }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 23px;
+    }
 
-        /* Print button */
-        .print-button {
-            display: block;
-            margin: 20px auto;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 7px;
-            background: #363540;
-            color: white;
-            font-family: inherit;
-            font-size: 15px;
-            cursor: pointer;
-        }
+    .section-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      background: var(--soft);
+      border-radius: 12px;
+      font-size: 20px;
+    }
 
-        .print-button:hover {
-            background: #514f60;
-        }
+    h2 {
+      font-size: 22px;
+      line-height: 1.4;
+    }
 
-        /* Tablet */
-        @media (max-width: 760px) {
-            .resume {
-                margin: 0;
-            }
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-            .header {
-                min-height: auto;
-                padding: 35px 20px 30px;
-                flex-direction: column;
-                text-align: center;
-            }
+    .about-text {
+      color: #555b65;
+      font-size: 15px;
+    }
 
-            .profile {
-                position: static;
-                transform: none;
-                width: 180px;
-                height: 180px;
-                margin-bottom: 20px;
-            }
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
 
-            .header-text {
-                margin-left: 0;
-            }
+    .timeline-item {
+      position: relative;
+      padding: 0 0 23px 22px;
+      border-left: 2px solid var(--line);
+    }
 
-            .header-text h1 {
-                font-size: 39px;
-            }
+    .timeline-item:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
 
-            .header-text p {
-                font-size: 19px;
-            }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      left: -6px;
+      top: 8px;
+    }
 
-            .content {
-                grid-template-columns: 1fr;
-            }
+    .date {
+      color: var(--accent);
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
 
-            .left-column,
-            .right-column {
-                padding: 35px 25px;
-            }
+    .item-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
 
-            .about {
-                font-size: 14px;
-            }
-        }
+    .item-description {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
 
-        /* Save as PDF */
-        @media print {
-            @page {
-                size: A4;
-                margin: 0;
-            }
+    .skill-group {
+      margin-bottom: 22px;
+    }
 
-            body {
-                background: white;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
 
-            .resume {
-                max-width: none;
-                width: 100%;
-                margin: 0;
-                box-shadow: none;
-            }
+    .skill-label {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
 
-            .print-button {
-                display: none;
-            }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
 
-            .header {
-                min-height: 245px;
-            }
+    .tag {
+      background: #f4f5f7;
+      border: 1px solid #e9ebef;
+      color: #444a54;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
 
-            .profile {
-                width: 250px;
-                height: 250px;
-            }
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
 
-            .left-column,
-            .right-column {
-                padding-top: 85px;
-            }
-        }
-    </style>
+    .project-card {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      transition: .2s;
+    }
+
+    .project-card:hover {
+      border-color: #b7ccff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(20,40,80,.05);
+    }
+
+    .project-number {
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .project-tech span {
+      background: var(--soft);
+      color: #315ab4;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-size: 11px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+    }
+
+    .contact-item {
+      min-width: 0;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+
+    .contact-value {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 10px 0 30px;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 28px, 600px);
+      }
+
+      nav {
+        min-height: 65px;
+      }
+
+      .nav-links {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .nav-links a:nth-child(2),
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
+
+      main {
+        padding-top: 22px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 28px 22px;
+        gap: 28px;
+      }
+
+      .photo-wrap {
+        grid-row: 1;
+      }
+
+      .profile-photo {
+        width: 165px;
+        border-radius: 16px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .intro {
+        margin: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .section {
+        padding: 24px 20px;
+        margin-top: 18px;
+      }
+
+      .two-columns,
+      .projects,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    @media print {
+      header, .hero-actions, footer {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      main {
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .hero, .section {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <nav class="container">
+      <a href="#home" class="brand">NATT<span>.</span></a>
 
-    <button class="print-button" onclick="window.print()">
-        <i class="fa-solid fa-file-pdf"></i>
-        Print / Save as PDF
-    </button>
+      <div class="nav-links">
+        <a href="#about">เกี่ยวกับผม</a>
+        <a href="#education">การศึกษา</a>
+        <a href="#projects">ผลงาน</a>
+        <a href="#contact">ติดต่อ</a>
+        <a href="../" class="back-link">← E-Report</a>
+      </div>
+    </nav>
+  </header>
 
-    <div class="resume">
+  <main class="container" id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">MY RESUME · 2026</span>
+        <h1>ณัฐวุฒิ อิ่มจิตร</h1>
+        <div class="job-title">Computer Science Student | Web Developer</div>
 
-        <!-- Header -->
-        <header class="header">
+        <p class="intro">
+          นักศึกษาสาขาวิทยาการคอมพิวเตอร์ที่สนใจการพัฒนาเว็บไซต์
+          การออกแบบระบบ และเทคโนโลยีสารสนเทศ
+          พร้อมเรียนรู้สิ่งใหม่และนำความรู้ไปพัฒนาผลงานจริง
+        </p>
 
-           <!-- Profile Photo -->
-<img
-    src="../me.png"
-    alt="Nattawut Aimjit"
-    class="profile"
->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">ดูผลงานของผม ↗</a>
+          <a class="btn btn-secondary" href="#contact">ติดต่อผม</a>
+        </div>
+      </div>
 
-            <div class="header-text">
-                <h1>
-                    Nattawut
-                    <span>Aimjit</span>
-                </h1>
-                <p>Web Developer</p>
-            </div>
+      <div class="photo-wrap">
+        <img
+          class="profile-photo"
+          src="../me.png"
+          alt="รูปโปรไฟล์ ณัฐวุฒิ อิ่มจิตร"
+        >
+      </div>
+    </section>
 
-        </header>
+    <section class="section" id="about">
+      <div class="section-heading">
+        <div class="section-icon">👋</div>
+        <div>
+          <h2>About Me</h2>
+          <div class="section-subtitle">เกี่ยวกับผม</div>
+        </div>
+      </div>
 
-        <!-- Resume content -->
-        <main class="content">
+      <p class="about-text">
+        ผมชื่อ ณัฐวุฒิ อิ่มจิตร กำลังศึกษาระดับปริญญาตรี
+        สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏเพชรบุรี
+        มีความสนใจด้าน Web Development และงาน IT
+        มีพื้นฐาน HTML, CSS, PHP และ MySQL
+        ชอบฝึกพัฒนาโปรเจกต์เพื่อเพิ่มทักษะการเขียนโปรแกรม
+        การแก้ปัญหา และการทำงานร่วมกับผู้อื่น
+      </p>
+    </section>
 
-            <!-- Left column -->
-            <aside class="left-column">
+    <div class="two-columns">
+      <section class="section" id="education">
+        <div class="section-heading">
+          <div class="section-icon">🎓</div>
+          <div>
+            <h2>Education</h2>
+            <div class="section-subtitle">ประวัติการศึกษา</div>
+          </div>
+        </div>
 
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-user"></i>
-                        About Me
-                    </h2>
+        <div class="timeline-item">
+          <div class="date">2023 – 2027</div>
+          <div class="item-title">ปริญญาตรี วิทยาการคอมพิวเตอร์</div>
+          <div class="item-description">
+            มหาวิทยาลัยราชภัฏเพชรบุรี
+          </div>
+          <div class="item-description">GPA: 3.10</div>
+        </div>
 
-                    <p class="about">
-                        I am a Computer Science student with skills in
-                        HTML, CSS, PHP, and JavaScript. I enjoy solving
-                        problems and developing practical web applications.
-                        I am responsible, punctual, and eager to learn new
-                        technologies while improving my development skills.
-                    </p>
-                </section>
+        <div class="timeline-item">
+          <div class="date">2020 – 2022</div>
+          <div class="item-title">มัธยมศึกษาตอนปลาย</div>
+          <div class="item-description">
+            โรงเรียนเขาย้อยวิทยา
+          </div>
+          <div class="item-description">
+            แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์
+          </div>
+        </div>
+      </section>
 
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-address-card"></i>
-                        Contact
-                    </h2>
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <div class="section-icon">⚡</div>
+          <div>
+            <h2>My Skills</h2>
+            <div class="section-subtitle">ทักษะของผม</div>
+          </div>
+        </div>
 
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>0981789044</span>
-                    </div>
+        <div class="skill-group">
+          <div class="skill-label">Technical Skills</div>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">PHP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
 
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:Nattawut.aim64@gmail.com">
-                            Nattawut.aim64@gmail.com
-                        </a>
-                    </div>
+        <div class="skill-group">
+          <div class="skill-label">Soft Skills</div>
+          <div class="tags">
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Creativity</span>
+            <span class="tag">Responsibility</span>
+          </div>
+        </div>
 
-                    <div class="contact-item">
-                        <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/003nat300-hash"
-                           target="_blank">
-                            github.com/003nat300-hash
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>
-                            Nong Chumphon, Khao Yoi,
-                            Phetchaburi, Thailand
-                        </span>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-gear"></i>
-                        Skills
-                    </h2>
-
-                    <ul class="skill-list">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>PHP</li>
-                        <li>JavaScript</li>
-                        <li>MySQL</li>
-                        <li>Problem Solving</li>
-                        <li>Teamwork</li>
-                        <li>Creativity</li>
-                        <li>Responsibility</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-language"></i>
-                        Language
-                    </h2>
-
-                    <ul class="language-list">
-                        <li>Thai — Native</li>
-                        <li>English — Basic</li>
-                    </ul>
-                </section>
-
-            </aside>
-
-            <!-- Right column -->
-            <div class="right-column">
-
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        Education
-                    </h2>
-
-                    <div class="timeline-item">
-                        <h3>2020 – 2022</h3>
-                        <h4>Khaoyoiwittaya School</h4>
-                        <p>Science – Mathematics</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>2023 – 2027</h3>
-                        <h4>Phetchaburi Rajabhat University</h4>
-                        <p>Bachelor of Computer Science</p>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-briefcase"></i>
-                        Projects
-                    </h2>
-
-                    <div class="timeline-item">
-                        <h3>2025 – Present</h3>
-                        <h4>DormHub – Dormitory Search System</h4>
-
-                        <ul>
-                            <li>
-                                Developed a web application using
-                                HTML, CSS, PHP, and JavaScript.
-                            </li>
-                            <li>
-                                Designed a system for searching and
-                                displaying dormitory information.
-                            </li>
-                            <li>
-                                Integrated location and map features
-                                to help users find nearby accommodation.
-                            </li>
-                            <li>
-                                Developed features for dormitory owners
-                                to manage accommodation listings.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>2025</h3>
-                        <h4>E-Commerce Basic System</h4>
-
-                        <ul>
-                            <li>
-                                Developed basic online shopping
-                                and shopping cart features.
-                            </li>
-                            <li>
-                                Created product and order management
-                                functions.
-                            </li>
-                            <li>
-                                Practiced database design and
-                                backend development.
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fa-solid fa-bullseye"></i>
-                        Career Objective
-                    </h2>
-
-                    <p>
-                        Seeking an opportunity to apply my web
-                        development skills, gain practical experience,
-                        and contribute to real-world software projects.
-                    </p>
-                </section>
-
-            </div>
-        </main>
+        <div class="skill-group">
+          <div class="skill-label">Languages</div>
+          <div class="tags">
+            <span class="tag">Thai — Native</span>
+            <span class="tag">English — Basic</span>
+          </div>
+        </div>
+      </section>
     </div>
 
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <div class="section-icon">💻</div>
+        <div>
+          <h2>Featured Projects</h2>
+          <div class="section-subtitle">โปรเจกต์ที่ผมเคยพัฒนา</div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project-card">
+          <div class="project-number">PROJECT 01 · 2025–PRESENT</div>
+          <h3>DormHub</h3>
+          <p>
+            ระบบค้นหาหอพักและที่พัก พัฒนาขึ้นเพื่อช่วยให้ผู้ใช้งาน
+            ค้นหาที่พัก ดูรายละเอียด และพิจารณาตำแหน่งที่ตั้ง
+            โดยเน้นพื้นที่ใกล้มหาวิทยาลัยราชภัฏเพชรบุรี
+          </p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Leaflet</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">PROJECT 02 · 2025</div>
+          <h3>E-Commerce Basic System</h3>
+          <p>
+            โปรเจกต์ระบบร้านค้าออนไลน์ระดับพื้นฐาน
+            สำหรับฝึกพัฒนาหน้าเว็บไซต์และทำความเข้าใจ
+            กระบวนการทำงานของระบบ E-Commerce
+          </p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-heading">
+        <div class="section-icon">✉️</div>
+        <div>
+          <h2>Get In Touch</h2>
+          <div class="section-subtitle">ช่องทางติดต่อ</div>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-label">PHONE</div>
+          <div class="contact-value">
+            <a href="tel:0981789044">098-178-9044</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">EMAIL</div>
+          <div class="contact-value">
+            <a href="mailto:Nattawut.aim64@gmail.com">
+              Nattawut.aim64@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">GITHUB</div>
+          <div class="contact-value">
+            <a href="https://github.com/003nat300-hash"
+               target="_blank" rel="noopener noreferrer">
+              github.com/003nat300-hash ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">LOCATION</div>
+          <div class="contact-value">
+            หนองชุมพล เขาย้อย เพชรบุรี ประเทศไทย
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary"
+           href="mailto:Nattawut.aim64@gmail.com">
+          ส่งอีเมลหาผม ↗
+        </a>
+        <button class="btn btn-secondary" onclick="window.print()">
+          พิมพ์ / บันทึกเป็น PDF
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Nattawut Aimjit · Designed & Built with care.
+  </footer>
 </body>
 </html>
